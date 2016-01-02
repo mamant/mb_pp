@@ -8,7 +8,9 @@
     <title>mb index</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="dist/css/sprite.css" rel="stylesheet">
+     <link href="dist/css/mb.theme.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,11 +20,303 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world!</h1>
+
+<div class="container">
+  <header class="row">
+      <div class="col-md-3">
+        <a href="#" class="icon-logo"></a>
+      </div>
+      <div class="col-md-9 text-right header-nav">
+        <ul class="header-lang">
+          <li><a href="#">uk</a></li>
+          <li><a href="#">ru</a></li>
+          <li><a href="#" class="curr">en</a></li>
+        </ul>
+        <ul class="header-menu">
+          <li><a href="#"><i class="icon-top_chat"></i>chat</a></li>
+          <li><a href="#"><i class="icon-top_messege"></i>mew message <span class="count">1</span></a></li>
+          <li><a href="#"><i class="icon-top_login"></i>login, as yury</a></li>
+        </ul>
+      </div>
+  </header>
+  <div class="row">
+   <div class="col-md-6 hidden-xs">
+      <ol class="breadcrumb">
+        <li><a href="#">Amdinistrative module</a></li>
+        <li><a href="#">Mobile banking</a></li>
+        <li class="active">Transactions</li>
+      </ol>
+   </div>
+   <div class="col-md-6 top-search">
+     <form class="form-inline">
+      <div class="input-group input-group-sm">
+        <input type="text" class="form-control" placeholder="Telephone number">
+      </div>
+      <div class="input-group input-group-sm">
+         <input type="tetx" class="form-control" placeholder="Passport serial">
+      </div>
+      <div class="input-group input-group-sm">
+        <input type="tetx" class="form-control" placeholder="Card number">
+      </div>
+      <div class="input-group input-group-sm text-right">
+        <button class="btn btn-sm btn-success">Search</button>
+      </div>
+      </form>
+   </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <div class="left-nav">
+        <div class="left-nav__header">
+          <i class="left-nav__icn icon-mobile_banking"></i>
+          <div class="left-nav__text">Mobile bankings</div>
+          <a class="left-nav__toggle" data-toggle="collapse" href="#collapseMenu1" aria-expanded="true" aria-controls="collapseMenu1">&#155;</a>
+        </div>
+        <div class="collapse in" id="collapseMenu1">
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-statictics act"></i>
+            <i class="left-nav__icn icon-statictics_white na"></i>
+            <div class="left-nav__text">STATISTICS</div>
+            <span class="left-nav__count">2</span>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-aplications act"></i>
+            <i class="left-nav__icn icon-aplications_white na"></i>
+            <div class="left-nav__text">APLICATIONS</div>
+          </a>
+          <a href="#" class="left-nav__item curr">
+            <i class="left-nav__icn icon-clients act"></i>
+            <i class="left-nav__icn icon-clients_white na"></i>
+            <div class="left-nav__text">CLIENTS</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-transactions act"></i>
+            <i class="left-nav__icn icon-transactions_white na"></i>
+            <div class="left-nav__text">TRANSACTION</div>
+          </a>
+          <a href="#" class="left-nav__item">
+           <i class="left-nav__icn icon-log_view act"></i>
+            <i class="left-nav__icn icon-log_view_white na"></i>
+            <div class="left-nav__text">LOG VIEW</div>
+          </a>
+        </div>
+
+        <div class="left-nav__header">
+          <i class="left-nav__icn icon-meta_data"></i>
+          <div class="left-nav__text">Meta data</div>
+          <a class="left-nav__toggle" data-toggle="collapse" href="#collapseMenu2" aria-expanded="true" aria-controls="collapseMenu2">&#155;</a>
+        </div>
+        <div class="collapse in" id="collapseMenu2">
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-card_prod act"></i>
+            <i class="left-nav__icn icon-card_prod_white na"></i>
+            <div class="left-nav__text">CARD PRODUCTION</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-merchant act"></i>
+            <i class="left-nav__icn icon-merchant_white na"></i>
+            <div class="left-nav__text">MERCHANT CATEGORY</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-countries act"></i>
+            <i class="left-nav__icn icon-countries_white na"></i>
+            <div class="left-nav__text">COUNTRIES</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-system_param act"></i>
+            <i class="left-nav__icn icon-system_param_white na"></i>
+            <div class="left-nav__text">SYSTEM PARAMS</div>
+          </a>
+          <a href="#" class="left-nav__item">
+           <i class="left-nav__icn icon-dictonaries act"></i>
+            <i class="left-nav__icn icon-dictonaries_white na"></i>
+            <div class="left-nav__text">DICTIONARIES</div>
+          </a>
+        </div>
+
+        <div class="left-nav__header">
+          <i class="left-nav__icn icon-external"></i>
+          <div class="left-nav__text">External system</div>
+          <a class="left-nav__toggle" data-toggle="collapse" href="#collapseMenu3" aria-expanded="true" aria-controls="collapseMenu3">&#155;</a>
+        </div>
+        <div class="collapse in" id="collapseMenu3">
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-settings act"></i>
+            <i class="left-nav__icn icon-settings_white na"></i>
+            <div class="left-nav__text">SETTINGS</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-m2 act"></i>
+            <i class="left-nav__icn icon-m2_white na"></i>
+            <div class="left-nav__text">M2</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-cbs act"></i>
+            <i class="left-nav__icn icon-cbs_white na"></i>
+            <div class="left-nav__text">CBS</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-sms act"></i>
+            <i class="left-nav__icn icon-sms_white na"></i>
+            <div class="left-nav__text">SMS</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-push act"></i>
+            <i class="left-nav__icn icon-push_white na"></i>
+            <div class="left-nav__text">PUSH</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-chat act"></i>
+            <i class="left-nav__icn icon-chat_white na"></i>
+            <div class="left-nav__text">Chat</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-call act"></i>
+            <i class="left-nav__icn icon-call_white na"></i>
+            <div class="left-nav__text">Call center</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-9">
+      <div class="row top-title">
+        <div class="col-md-9">
+          <h1><i class="icon-top_login"></i>TRANSACTION LIST</h1>
+        </div>
+        <div class="col-md-3 text-right">
+          <a href="#" class="back-link">BACK</a>
+        </div>
+      </div>
+
+      <div class="table-responsive transactions-list">
+        <form class="form-inline">
+          <div class="input-group input-group-sm">
+            <select class="form-control">
+              <option>Type</option>
+              <option>Type 1</option>
+              <option>Type 2</option>
+            </select>
+          </div>
+          <div class="input-group input-group-sm">
+            <input type="date" class="form-control" placeholder="dd.mm.yy">
+          </div>
+          <div class="input-group input-group-sm">
+            <input type="text" class="form-control" placeholder="Card">
+          </div>
+          <div class="input-group input-group-sm">
+            <input type="text" class="form-control" placeholder="Amount">
+          </div>
+          <div class="input-group input-group-sm pull-right">
+            <div class="btn-group btn-group-sm" role="group">
+              <button type="button" class="btn btn-primary">All transactions</button>
+              <button type="button" class="btn btn-default">Card client</button>
+            </div>
+          </div>
+        </form>
+        <table class="table table-striped">
+          <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Card</th>
+            <th>To</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>PhoneNumber</th>
+            <th></th>
+            <th>ErrorMessage</th>
+          </tr>
+          <tr>
+            <td>242</td>
+            <td>06.10.2015 08:57:25</td>
+            <td>Card2Card</td>
+            <td>5299 54** **** 7440</td>
+            <td>5299 54** **** 7345</td>
+            <td>3.67</td>
+            <td>Success</td>
+            <td>Yuriy Antotynuk</td>
+            <td>380966607012</td>
+            <td></td>
+          </tr>
+          <tr class="danger">
+            <td>242</td>
+            <td>06.10.2015 08:57:25</td>
+            <td>Card2Card</td>
+            <td>5299 54** **** 7440</td>
+            <td>5299 54** **** 7345</td>
+            <td>3.67</td>
+            <td>Faild</td>
+            <td>Yuriy Antotynuk</td>
+            <td>380966607012</td>
+            <td>Unspecified Error</td>
+          </tr>
+          <tr>
+            <td>242</td>
+            <td>06.10.2015 08:57:25</td>
+            <td>Card2Card</td>
+            <td>5299 54** **** 7440</td>
+            <td>5299 54** **** 7345</td>
+            <td>3.67</td>
+            <td>Success</td>
+            <td>Yuriy Antotynuk</td>
+            <td>380966607012</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>242</td>
+            <td>06.10.2015 08:57:25</td>
+            <td>Card2Card</td>
+            <td>5299 54** **** 7440</td>
+            <td>5299 54** **** 7345</td>
+            <td>3.67</td>
+            <td>Success</td>
+            <td>Yuriy Antotynuk</td>
+            <td>380966607012</td>
+            <td></td>
+          </tr>
+        </table>
+
+         <nav class="text-right">
+          <ul class="pagination pagination-sm">
+            <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+            <li><a href="#">1 - 11</a></li>
+            <li><a href="#">12 - 22</a></li>
+            <li><a href="#">23 - 33</a></li>
+            <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer class="row">
+      <div class="col-md-4 copy-text">
+        Copyright 2015. Mobile Banking. All rights reserved.
+      </div>
+       <div class="col-md-4 row">
+       <div class="pull-left icon-what"></div>
+        <div class="footer-data">
+         <div class="h3">ATTENTION:</div>
+         User Status - Blocked
+        </div>
+      </div>
+      <div class="col-md-4 row">
+        <div class="pull-left icon-tel"></div>
+        <div class="footer-data">
+          <div class="h3">+380 95 660 70 12</div>
+          Free in Ukraine
+        </div>
+      </div>
+  </footer>
+</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="dist/js/jquery-2.1.4.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
   </body>
 </html>
