@@ -1,5 +1,6 @@
 @charset "UTF-8";
 body {
+  color: #646464;
   background-color: #FFFFFF;
   background: -webkit-gradient(linear, center top, center bottom, from(#FFFFFF), color-stop(100%, #E7F2FF));
   background: -webkit-linear-gradient(top, #FFFFFF, #E7F2FF 100%);
@@ -8,7 +9,7 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFE7F2FF', GradientType=0)"; }
 
 h1, .h1, .back-link {
-  margin: 0 0 30px;
+  margin: 0 0 15px;
   padding-top: 0;
   font-size: 18px;
   line-height: 32px;
@@ -222,6 +223,17 @@ header {
 .transactions-list {
   font-size: 10px;
   color: #666; }
+  .transactions-list table {
+    background-color: #fff; }
+  .transactions-list.table-sml {
+    font-size: 9px; }
+    .transactions-list.table-sml td, .transactions-list.table-sml th {
+      padding: 4px 2px; }
+  .transactions-list.table-md {
+    font-size: 11px;
+    margin-bottom: 30px; }
+  .transactions-list [class*='text-'] {
+    font-weight: bold; }
   .transactions-list td {
     white-space: nowrap; }
   .transactions-list form {
@@ -230,6 +242,14 @@ header {
     padding: 10px; }
   .transactions-list .form-inline .input-group {
     margin-right: 10px; }
+
+.table-header {
+  background-color: #73C8E6;
+  border-radius: 0px 20px 0px 0px;
+  padding: 8px 8px 6px;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold; }
 
 footer {
   margin-top: 30px;
@@ -243,3 +263,63 @@ footer {
   footer .footer-data {
     margin-left: 15px;
     float: left; }
+
+.cards-preview .text-center {
+  margin: 10px 0 30px;
+  font-size: 14px; }
+
+.profile-options {
+  margin-bottom: 30px;
+  display: block; }
+
+.profile-img-previev {
+  margin-bottom: 30px;
+  border: 3px solid #73C8E6;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer; }
+  .profile-img-previev:hover {
+    border-color: #48b7de; }
+  .profile-img-previev img {
+    border-radius: 0 27px 27px 0; }
+
+@media screen and (max-width: 767px) {
+  header,
+  footer,
+  .top-search,
+  .left-nav__header,
+  .table-header,
+  .transactions-list form {
+    border-radius: 0; }
+
+  .top-search {
+    padding: 20px 10px 10px;
+    margin: 0 0 20px; }
+
+  .top-search .form-inline .input-group {
+    width: 100%;
+    margin: 0 0 10px; }
+
+  .left-nav {
+    box-shadow: none; }
+
+  .top-title {
+    padding-top: 15px;
+    border-top: 1px solid #eee; }
+
+  .back-link:before {
+    margin-right: 0; }
+
+  footer .col-sm-4 {
+    margin-top: 20px; }
+  footer .footer-data {
+    float: none;
+    margin: 0; }
+
+  .transactions-list form {
+    overflow: hidden; }
+
+  .transactions-list .form-inline .input-group {
+    display: block;
+    width: 100%;
+    margin: 0 0 10px;
+    overflow: hidden; } }

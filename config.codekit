@@ -29,6 +29,50 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/dist\/img\/card_back.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7367,
+		"inputAbbreviatedPath": "\/dist\/img\/card_back.jpg",
+		"outputAbbreviatedPath": "\/dist\/img\/card_back.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dist\/img\/card_front.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18300,
+		"inputAbbreviatedPath": "\/dist\/img\/card_front.jpg",
+		"outputAbbreviatedPath": "\/dist\/img\/card_front.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dist\/img\/foto1_big-crop-u895.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17580,
+		"inputAbbreviatedPath": "\/dist\/img\/foto1_big-crop-u895.jpg",
+		"outputAbbreviatedPath": "\/dist\/img\/foto1_big-crop-u895.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dist\/img\/foto2_big-crop-u949.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 30878,
+		"inputAbbreviatedPath": "\/dist\/img\/foto2_big-crop-u949.jpg",
+		"outputAbbreviatedPath": "\/dist\/img\/foto2_big-crop-u949.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/dist\/img\/sprite.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -604,20 +648,20 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/send_card.htm": {
+	"\/set_card.htm": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/send_card.htm",
+		"inputAbbreviatedPath": "\/set_card.htm",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/transactions_list.htm": {
+	"\/transactions.htm": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/transactions_list.htm",
+		"inputAbbreviatedPath": "\/transactions.htm",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
