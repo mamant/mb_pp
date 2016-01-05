@@ -1,14 +1,70 @@
 $blue-bg: #73C8E6;
 
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    left: 0;
+    -webkit-transition:  left 0.4s ease-in-out;
+    -moz-transition:  left 0.4s ease-in-out;
+    -ms-transition:  left 0.4s ease-in-out;
+    -o-transition:  left 0.4s ease-in-out;
+    transition:  left 0.4s ease-in-out;
+}
+.container.open-sidebar {
+    left: 240px;
+}
+
+#sidebar-toggle {
+	background: #fff;
+	border-radius: 3px;
+	display: block;
+	position: relative;
+	padding: 10px 7px;
+	position: absolute;
+	left: 20px;
+	top: 30px;
+	z-index: 2;
+
+	& .bar{
+		display: block;
+		width: 18px;
+		margin-bottom: 3px;
+		height: 2px;
+		background-color: #73C8E6;
+		border-radius: 1px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+#sidebar {
+	position: absolute;
+	left: -240px;
+	width: 240px;
+	height: 100%;
+	box-sizing: border-box;
+	background-color: #fff;
+	z-index: 2;
+}
+
+.open-sidebar #sidebar {
+	-webkit-box-shadow: 7px 0px 18px -4px rgba(0,0,0,0.5);
+	-moz-box-shadow: 7px 0px 18px -4px rgba(0,0,0,0.5);
+	box-shadow: 7px 0px 18px -4px rgba(0,0,0,0.5);
+}
+
+
 body {
 	color: #646464;
-	background-color: #FFFFFF;
-	background: -webkit-gradient(linear, center top, center bottom, from(#FFFFFF),color-stop(100%, #E7F2FF));
-	background: -webkit-linear-gradient(top,#FFFFFF ,#E7F2FF 100%);
-	background: linear-gradient(to bottom,#FFFFFF ,#E7F2FF 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF, endColorstr=#FFE7F2FF, GradientType=0);
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFE7F2FF', GradientType=0)";
-}
+	background-color: #f1f5fa;
+	}
 
 h1, .h1 {
 	margin: 0 0 15px;
@@ -42,7 +98,7 @@ h1, .h1 {
 	background: linear-gradient(to right,#288CBE ,#50A0BE 100%);
 }
 
-header {
+.header {
 	@extend .blue_gradient;
 	color: #fff;
 	border-radius: 0px 30px 30px 0px;
@@ -95,6 +151,10 @@ header {
 
 	& .header-menu li {
 		margin-right: 30px;
+
+		&:last-child {
+			margin-right: 0;
+		}
 	}
 
 	& [class*='icon-'] {
@@ -159,7 +219,7 @@ header {
 	background-color: #75c6e6;
 	border-radius: 0 30px 30px 0;
 	color: #fff;
-	padding: 55px 30px 10px 0;
+	padding: 55px 0 10px 0;
 	padding-top: 55px;
 	padding-bottom: 10px;
 	margin: -45px 0 0 0;
@@ -181,6 +241,7 @@ header {
 .left-nav {
 	box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.25);
 	border-top-right-radius: 20px;
+	background-color: #fff;
 
 	&__header {
 		@extend .blue_gradient;
@@ -331,14 +392,14 @@ header {
 	& td {
 		white-space: nowrap;
 	}
+}
 
-	& form {
-		background-color: #73C8E6;
-		border-radius: 0px 20px 0px 0px;
-		padding: 10px;
-	}
+.transactions-form {
+	background-color: #73C8E6;
+	border-radius: 0px 20px 0px 0px;
+	padding: 10px;
 
-	& .form-inline .input-group {
+	& .input-group {
 		margin-right: 10px;
 	}
 }
@@ -348,7 +409,7 @@ header {
 	border-radius: 0px 20px 0px 0px;
 	padding: 8px 8px 6px;
 	color: #fff;
-	font-size: 1.1em;
+	font-size: 1em;
 	font-weight: bold;
 }
 
@@ -380,6 +441,7 @@ footer {
 .profile-options {
 	margin-bottom: 30px;
 	display: block;
+	overflow: hidden;
 }
 
 .profile-img-previev {
@@ -387,6 +449,7 @@ footer {
 	border: 3px solid $blue-bg;
 	border-radius: 0 30px 30px 0;
 	cursor: pointer;
+	max-width: 160px;
 
 	&:hover {
 		border-color: darken($blue-bg, 10%);
@@ -398,14 +461,19 @@ footer {
 }
 
 // RESPONCIVE
+@media (min-width: 1200px) {
+.transactions-form .input-group .visible-lg {
+	display: inline !important;
+}
+}
 
 @media screen and (max-width: 767px) {
-	header,
+	.header,
 	footer,
 	.top-search,
 	.left-nav__header,
 	.table-header,
-	.transactions-list form {
+	.transactions-form {
 		border-radius: 0;
 	}
 
@@ -423,18 +491,15 @@ footer {
 		box-shadow: none;
 	}
 
-	.top-title {
-		padding-top: 15px;
-		border-top: 1px solid #eee;
-	}
-
 	.back-link:before {
 		margin-right: 0;
 	}
 
 	footer {
+		overflow: hidden;
 		& .col-sm-4 {
 			margin-top: 20px;
+			max-width: 320px;
 		}
 		& .footer-data {
 			float: none;
@@ -442,15 +507,31 @@ footer {
 		}
 	}
 
-	.transactions-list form {
+	.transactions-form {
 		overflow: hidden;
+
+		& .input-group {
+			display: block;
+			width: 100%;
+			margin: 0 0 10px;
+			overflow: hidden;
+		}
 	}
 
-	.transactions-list .form-inline .input-group {
+	.profile-transation-toggle {
+		margin-bottom: 20px;
+	}
+
+	.header .icon-logo {
+		float: none;
+		margin: 0 auto;
 		display: block;
-		width: 100%;
-		margin: 0 0 10px;
-		overflow: hidden;
+	}
+
+	.header ul {
+		margin:0;
+		padding: 0;
+		float: none;
 	}
 }
 

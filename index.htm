@@ -20,25 +20,144 @@
     <![endif]-->
   </head>
   <body>
-
 <div class="container">
-  <header class="row">
+<div class="swipe-area"></div>
+<a href="#" data-toggle=".container" class="visible-xs" id="sidebar-toggle">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</a>
+<div id="sidebar" class="visible-xs">
+    <div class="left-nav">
+        <div class="left-nav__header">
+          <i class="left-nav__icn icon-mobile_banking"></i>
+          <div class="left-nav__text">Mobile bankings</div>
+          <a class="left-nav__toggle" data-toggle="collapse" href="#collapseMenu1" aria-expanded="true" aria-controls="collapseMenu1">&#155;</a>
+        </div>
+        <div class="collapse in" id="collapseMenu1">
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-statictics act"></i>
+            <i class="left-nav__icn icon-statictics_white na"></i>
+            <div class="left-nav__text">STATISTICS</div>
+            <span class="left-nav__count">2</span>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-aplications act"></i>
+            <i class="left-nav__icn icon-aplications_white na"></i>
+            <div class="left-nav__text">APLICATIONS</div>
+          </a>
+          <a href="#" class="left-nav__item curr">
+            <i class="left-nav__icn icon-clients act"></i>
+            <i class="left-nav__icn icon-clients_white na"></i>
+            <div class="left-nav__text">CLIENTS</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-transactions act"></i>
+            <i class="left-nav__icn icon-transactions_white na"></i>
+            <div class="left-nav__text">TRANSACTION</div>
+          </a>
+          <a href="#" class="left-nav__item">
+           <i class="left-nav__icn icon-log_view act"></i>
+            <i class="left-nav__icn icon-log_view_white na"></i>
+            <div class="left-nav__text">LOG VIEW</div>
+          </a>
+        </div>
+
+        <div class="left-nav__header">
+          <i class="left-nav__icn icon-meta_data"></i>
+          <div class="left-nav__text">Meta data</div>
+          <a class="left-nav__toggle" data-toggle="collapse" href="#collapseMenu2" aria-expanded="true" aria-controls="collapseMenu2">&#155;</a>
+        </div>
+        <div class="collapse in" id="collapseMenu2">
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-card_prod act"></i>
+            <i class="left-nav__icn icon-card_prod_white na"></i>
+            <div class="left-nav__text">CARD PRODUCTION</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-merchant act"></i>
+            <i class="left-nav__icn icon-merchant_white na"></i>
+            <div class="left-nav__text">MERCHANT CATEGORY</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-countries act"></i>
+            <i class="left-nav__icn icon-countries_white na"></i>
+            <div class="left-nav__text">COUNTRIES</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-system_param act"></i>
+            <i class="left-nav__icn icon-system_param_white na"></i>
+            <div class="left-nav__text">SYSTEM PARAMS</div>
+          </a>
+          <a href="#" class="left-nav__item">
+           <i class="left-nav__icn icon-dictonaries act"></i>
+            <i class="left-nav__icn icon-dictonaries_white na"></i>
+            <div class="left-nav__text">DICTIONARIES</div>
+          </a>
+        </div>
+
+        <div class="left-nav__header">
+          <i class="left-nav__icn icon-external"></i>
+          <div class="left-nav__text">External system</div>
+          <a class="left-nav__toggle" data-toggle="collapse" href="#collapseMenu3" aria-expanded="true" aria-controls="collapseMenu3">&#155;</a>
+        </div>
+        <div class="collapse in" id="collapseMenu3">
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-settings act"></i>
+            <i class="left-nav__icn icon-settings_white na"></i>
+            <div class="left-nav__text">SETTINGS</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-m2 act"></i>
+            <i class="left-nav__icn icon-m2_white na"></i>
+            <div class="left-nav__text">M2</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-cbs act"></i>
+            <i class="left-nav__icn icon-cbs_white na"></i>
+            <div class="left-nav__text">CBS</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-sms act"></i>
+            <i class="left-nav__icn icon-sms_white na"></i>
+            <div class="left-nav__text">SMS</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-push act"></i>
+            <i class="left-nav__icn icon-push_white na"></i>
+            <div class="left-nav__text">PUSH</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-chat act"></i>
+            <i class="left-nav__icn icon-chat_white na"></i>
+            <div class="left-nav__text">Chat</div>
+          </a>
+          <a href="#" class="left-nav__item">
+            <i class="left-nav__icn icon-call act"></i>
+            <i class="left-nav__icn icon-call_white na"></i>
+            <div class="left-nav__text">Call center</div>
+          </a>
+        </div>
+      </div>
+</div>
+
+  <div class="row header">
       <div class="col-sm-3">
         <a href="index.htm" class="icon-logo"></a>
       </div>
       <div class="col-sm-9 text-right header-nav">
-        <ul class="header-lang">
+        <ul class="header-lang hidden-xs">
           <li><a href="#">uk</a></li>
           <li><a href="#">ru</a></li>
           <li><a href="#" class="curr">en</a></li>
         </ul>
         <ul class="header-menu">
           <li><a href="#"><i class="icon-top_chat"></i>chat</a></li>
-          <li><a href="#"><i class="icon-top_messege"></i>mew message <span class="count">1</span></a></li>
-          <li><a href="#"><i class="icon-top_login"></i>login, as yury</a></li>
+          <li><a href="#"><i class="icon-top_messege"></i>new message <span class="count">1</span></a></li>
+          <li><a href="#"><i class="icon-top_login"></i><span class="hidden-xs">login, as </span>yury</a></li>
         </ul>
       </div>
-  </header>
+  </div>
   <div class="row">
    <div class="col-sm-6 hidden-xs">
       <ol class="breadcrumb">
@@ -46,26 +165,26 @@
         <li class="active">Profile</li>
       </ol>
    </div>
-   <div class="col-sm-6 top-search">
+   <div class="col-sm-6 top-search row">
      <form class="form-inline">
-      <div class="input-group input-group-sm">
+      <div class="input-group col-sm-3 input-group-sm">
         <input type="text" class="form-control" placeholder="Telephone number">
       </div>
-      <div class="input-group input-group-sm">
+      <div class="input-group col-sm-3 input-group-sm">
          <input type="tetx" class="form-control" placeholder="Passport serial">
       </div>
-      <div class="input-group input-group-sm">
+      <div class="input-group col-sm-3 input-group-sm">
         <input type="tetx" class="form-control" placeholder="Card number">
       </div>
-      <div class="input-group input-group-sm text-right">
-        <button class="btn btn-sm btn-success">Search</button>
+      <div class="input-group col-sm-1 input-group-sm text-right">
+        <button class="btn btn-sm btn-success visible-xs visible-lg">Search</button>
+        <button class="btn btn-sm btn-success visible-sm visible-md">&#155;</button>
       </div>
       </form>
    </div>
   </div>
-
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-3 hidden-xs">
       <div class="left-nav">
         <div class="left-nav__header">
           <i class="left-nav__icn icon-mobile_banking"></i>
@@ -193,8 +312,8 @@
         <div class="col-sm-9">
           <div class="row">
             <div class="col-sm-6">
+              <div class="table-header">Common Data:</div>
               <div class="table-responsive transactions-list table-md">
-                <div class="table-header">Common Data:</div>
                 <table class="table table-striped">
                   <tr>
                     <td>Phone number</td><td>380936607012</td>
@@ -221,8 +340,8 @@
               </div>
             </div>
             <div class="col-sm-6">
+              <div class="table-header">Passport Data:</div>
               <div class="table-responsive transactions-list table-md">
-                <div class="table-header">Passport Data:</div>
                 <table class="table table-striped">
                   <tr>
                     <td>Series / number</td><td>mp1111</td>
@@ -256,8 +375,8 @@
             </div>
           </div>
 
+          <div class="table-header">Last Transaction:</div>
           <div class="table-responsive transactions-list table-sml">
-            <div class="table-header">Last Transaction:</div>
             <table class="table table-striped">
               <tr>
                 <th>ID</th>
@@ -321,6 +440,16 @@
               </tr>
             </table>
           </div>
+          <div class="row">
+          <div class="col-sm-12">
+            <div class="input-group input-group-sm pull-right profile-transation-toggle">
+              <div class="btn-group btn-group-sm" role="group">
+                <button type="button" class="btn btn-primary">All transactions</button>
+                <button type="button" class="btn btn-default">Card client</button>
+              </div>
+            </div>
+          </div>
+          </div>
         </div>
         <div class="col-sm-3 text-right">
           <div class="btn-group-vertical profile-options" role="group" >
@@ -369,5 +498,14 @@
     <script src="dist/js/jquery-2.1.4.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="dist/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+            $("[data-toggle]").click(function() {
+              var toggle_el = $(this).data("toggle");
+              $(toggle_el).toggleClass("open-sidebar");
+            });
+
+          });
+    </script>
   </body>
 </html>

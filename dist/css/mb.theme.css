@@ -1,12 +1,53 @@
 @charset "UTF-8";
+body, html {
+  height: 100%;
+  margin: 0; }
+
+.container {
+  position: relative;
+  height: 100%;
+  left: 0;
+  -webkit-transition: left 0.4s ease-in-out;
+  transition: left 0.4s ease-in-out; }
+
+.container.open-sidebar {
+  left: 240px; }
+
+#sidebar-toggle {
+  background: #fff;
+  border-radius: 3px;
+  display: block;
+  position: relative;
+  padding: 10px 7px;
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  z-index: 2; }
+  #sidebar-toggle .bar {
+    display: block;
+    width: 18px;
+    margin-bottom: 3px;
+    height: 2px;
+    background-color: #73C8E6;
+    border-radius: 1px; }
+    #sidebar-toggle .bar:last-child {
+      margin-bottom: 0; }
+
+#sidebar {
+  position: absolute;
+  left: -240px;
+  width: 240px;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  z-index: 2; }
+
+.open-sidebar #sidebar {
+  box-shadow: 7px 0px 18px -4px rgba(0, 0, 0, 0.5); }
+
 body {
   color: #646464;
-  background-color: #FFFFFF;
-  background: -webkit-gradient(linear, center top, center bottom, from(#FFFFFF), color-stop(100%, #E7F2FF));
-  background: -webkit-linear-gradient(top, #FFFFFF, #E7F2FF 100%);
-  background: linear-gradient(to bottom, #FFFFFF, #E7F2FF 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF, endColorstr=#FFE7F2FF, GradientType=0);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFE7F2FF', GradientType=0)"; }
+  background-color: #f1f5fa; }
 
 h1, .h1, .back-link {
   margin: 0 0 15px;
@@ -27,33 +68,33 @@ h1, .h1, .back-link {
 .form-control {
   border-radius: 4px !important; }
 
-.blue_gradient, header, .left-nav__header {
+.blue_gradient, .header, .left-nav__header {
   background: #50A0BE repeat-y left top;
   background: -webkit-gradient(linear, left center, right center, from(#288CBE), color-stop(100%, #50A0BE));
   background: -webkit-linear-gradient(left, #288CBE, #50A0BE 100%);
   background: linear-gradient(to right, #288CBE, #50A0BE 100%); }
 
-header {
+.header {
   color: #fff;
   border-radius: 0px 30px 30px 0px;
   overflow: hidden;
   padding: 12px 0;
   position: relative;
   z-index: 1; }
-  header .header-nav {
+  .header .header-nav {
     margin-top: 20px; }
-  header a {
+  .header a {
     text-decoration: none;
     display: inline-block;
     color: #fff;
     text-transform: uppercase;
     line-height: 30px;
     position: relative; }
-    header a.curr {
+    .header a.curr {
       font-weight: bold; }
-    header a:hover {
+    .header a:hover {
       color: #fff; }
-  header .count {
+  .header .count {
     background-color: #fc573b;
     color: #fff;
     font-size: 10px;
@@ -64,17 +105,19 @@ header {
     position: absolute;
     top: 0;
     right: -18px; }
-  header ul {
+  .header ul {
     list-style: none;
     float: right;
     overflow: hidden;
     margin: 0 0 0 20px; }
-  header .header-menu li {
+  .header .header-menu li {
     margin-right: 30px; }
-  header [class*='icon-'] {
+    .header .header-menu li:last-child {
+      margin-right: 0; }
+  .header [class*='icon-'] {
     float: left;
     margin-right: 4px; }
-  header li {
+  .header li {
     float: left;
     margin-right: 15px; }
 
@@ -116,7 +159,7 @@ header {
   background-color: #75c6e6;
   border-radius: 0 30px 30px 0;
   color: #fff;
-  padding: 55px 30px 10px 0;
+  padding: 55px 0 10px 0;
   padding-top: 55px;
   padding-bottom: 10px;
   margin: -45px 0 0 0; }
@@ -133,7 +176,8 @@ header {
 
 .left-nav {
   box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
-  border-top-right-radius: 20px; }
+  border-top-right-radius: 20px;
+  background-color: #fff; }
   .left-nav__header {
     text-transform: uppercase;
     color: #fff;
@@ -236,11 +280,12 @@ header {
     font-weight: bold; }
   .transactions-list td {
     white-space: nowrap; }
-  .transactions-list form {
-    background-color: #73C8E6;
-    border-radius: 0px 20px 0px 0px;
-    padding: 10px; }
-  .transactions-list .form-inline .input-group {
+
+.transactions-form {
+  background-color: #73C8E6;
+  border-radius: 0px 20px 0px 0px;
+  padding: 10px; }
+  .transactions-form .input-group {
     margin-right: 10px; }
 
 .table-header {
@@ -248,7 +293,7 @@ header {
   border-radius: 0px 20px 0px 0px;
   padding: 8px 8px 6px;
   color: #fff;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: bold; }
 
 footer {
@@ -270,25 +315,30 @@ footer {
 
 .profile-options {
   margin-bottom: 30px;
-  display: block; }
+  display: block;
+  overflow: hidden; }
 
 .profile-img-previev {
   margin-bottom: 30px;
   border: 3px solid #73C8E6;
   border-radius: 0 30px 30px 0;
-  cursor: pointer; }
+  cursor: pointer;
+  max-width: 160px; }
   .profile-img-previev:hover {
     border-color: #48b7de; }
   .profile-img-previev img {
     border-radius: 0 27px 27px 0; }
 
+@media (min-width: 1200px) {
+  .transactions-form .input-group .visible-lg {
+    display: inline !important; } }
 @media screen and (max-width: 767px) {
-  header,
+  .header,
   footer,
   .top-search,
   .left-nav__header,
   .table-header,
-  .transactions-list form {
+  .transactions-form {
     border-radius: 0; }
 
   .top-search {
@@ -302,24 +352,35 @@ footer {
   .left-nav {
     box-shadow: none; }
 
-  .top-title {
-    padding-top: 15px;
-    border-top: 1px solid #eee; }
-
   .back-link:before {
     margin-right: 0; }
 
-  footer .col-sm-4 {
-    margin-top: 20px; }
-  footer .footer-data {
-    float: none;
-    margin: 0; }
-
-  .transactions-list form {
+  footer {
     overflow: hidden; }
+    footer .col-sm-4 {
+      margin-top: 20px;
+      max-width: 320px; }
+    footer .footer-data {
+      float: none;
+      margin: 0; }
 
-  .transactions-list .form-inline .input-group {
-    display: block;
-    width: 100%;
-    margin: 0 0 10px;
-    overflow: hidden; } }
+  .transactions-form {
+    overflow: hidden; }
+    .transactions-form .input-group {
+      display: block;
+      width: 100%;
+      margin: 0 0 10px;
+      overflow: hidden; }
+
+  .profile-transation-toggle {
+    margin-bottom: 20px; }
+
+  .header .icon-logo {
+    float: none;
+    margin: 0 auto;
+    display: block; }
+
+  .header ul {
+    margin: 0;
+    padding: 0;
+    float: none; } }
